@@ -16,6 +16,7 @@ AI 기반 스포츠 관람 장소 추천 서비스는 사용자의 선호도와 
 - **FrontEnd**: React, Amazon EC2
 - **BackEnd**: Spring Boot, Java, Amazon EC2, MySQL, Amazon S3
 - **AI**: Python, Jupyter Notebook
+![기술 스택](capstone.png)
 
 ## 주요 기능
 - 사용자 맞춤형 스포츠 경기 관람 장소 추천
