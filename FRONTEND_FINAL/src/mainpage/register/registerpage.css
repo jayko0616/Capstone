@@ -1,0 +1,63 @@
+.signup {
+    justify-content: center;
+    margin-top: 15vh;
+    display: flex;
+    margin-right:25vh;
+}
+
+input::placeholder {
+    color: grey;
+}
+
+input[type="RegisterId"],
+input[type="RegisterPw"],
+input[type="tel"],
+input[type="RePw"]{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 5px;
+    width: 200%;
+}
+
+input[type="RePw"],
+input[type="telver"] {
+    margin-bottom: 3vh;
+}
+
+.checkId,
+.signup-button,
+.verify-button {
+    width: 210%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    color:white;
+    border-radius : 8px;
+    background-color: black;
+}
+
+.checkId:hover,
+.verify-button:hover
+{
+    background-color: darkred;
+}
+
+.signup-button:hover {
+    background-color: darkgreen;
+}
+
+.checkbox-field div {
+    width: 210%;
+    /*max-height: auto;*/
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    background-size: cover;
+    background-position: center;
+}
+

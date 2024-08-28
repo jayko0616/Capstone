@@ -1,0 +1,100 @@
+/*body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top : 5%;
+}
+
+.login-form {
+    background-color: white;
+    border: none;
+    padding: 40px;
+    text-align: center;
+    width: 300px;
+}
+
+.login-form h2 {
+    margin-bottom: 100px; /* LOGIN 글자와 ID, PW와의 간격을 늘림 */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #000; /* 밑면은 유지 */
+    border-left: 1px solid white; /* 왼쪽 면 흰색 */
+    border-right: 1px solid white; /* 오른쪽 면 흰색 */
+    border-top: 1px solid white; /* 윗면 흰색 */
+    border-radius: 0; /* 모서리 둥글지 않게 */
+}
+
+.input-group span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.login-form button {
+    margin-top: 10%;
+    width: 110%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #333;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #e41f1c;
+}
+
+.login-header {
+    letter-spacing: 0.5em; /* 각 글자 사이 간격 조절 */
+    font-weight: 350; /* 글자 얇게 */
+    text-align: center;
+}
+
+.askRegister {
+    margin-top: 5%;
+}
+
+.register-link {
+    text-decoration: underline;
+    cursor: pointer;
+    /*color: blue; !* 선택 사항: 하이퍼링크 색상 변경 *!*/
+}

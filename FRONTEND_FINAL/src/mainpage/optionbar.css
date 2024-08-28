@@ -1,0 +1,298 @@
+.option-bar {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 30%;
+    height: calc(100vh - 60px);
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 5vh;
+    border-radius: 15px;
+    overflow-y: auto;
+    z-index: 900;
+}
+
+.option-bar h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.option-bar .store {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+}
+
+.option-bar .store-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.option-bar .store-name {
+    font-weight: bold;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 18px;
+}
+
+.option-bar .store-rating {
+    margin-top: 5px; /* 한 줄 아래로 배치하여 겹치지 않게 */
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.option-bar .store-info {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+    width: 100%; /* 줄 바꿈을 위해 넓이 지정 */
+}
+
+.option-bar .like-icon {
+    font-size: 24px;
+    transition: color 0.3s;
+    position: absolute;
+    bottom: 10px; /* 하단에 배치 */
+    right: 10px; /* 오른쪽 하단에 배치 */
+    cursor: pointer;
+}
+
+.options, .options_master {
+    background-color: #d3d3d3;
+    padding: 3px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.options_master {
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+
+.options input[type="checkbox"], .options_master input[type="checkbox"] {
+    display: none;
+}
+
+.option-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.options label, .options_master label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+}
+
+.options .option, .options_master .option {
+    position: relative;
+}
+
+.options .option-selected, .options_master .option-selected {
+    color: #000;
+}
+
+.store-list {
+    overflow-y: auto;
+    height: calc(100% - 60px);
+    max-height: 300px; /* Adjust as needed */
+}
+
+.store-info {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: left;
+}
+
+.recommended-store-list {
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.recommended-store-list .store {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+}
+
+.recommended-store-list .store-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.recommended-store-list .store-name {
+    font-weight: bold;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.recommended-store-list .store-rating {
+    margin-top: 5px; /* 한 줄 아래로 배치하여 겹치지 않게 */
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.recommended-store-list .store-info {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+    width: 100%; /* 줄 바꿈을 위해 넓이 지정 */
+}
+
+.recommended-store-list .like-icon {
+    font-size: 24px;
+    transition: color 0.3s;
+    position: absolute;
+    bottom: 10px; /* 하단에 배치 */
+    right: 10px; /* 오른쪽 하단에 배치 */
+    cursor: pointer;
+}
+
+.store-registration {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-registration .form-group {
+    margin-bottom: 20px;
+}
+
+.store-registration label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.store-registration input[type="text"], .store-registration input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid lightslategray;
+}
+
+.store-registration input[type="file"]::file-selector-button {
+    display: none;
+}
+
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-upload-button {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+}
+
+.file-name {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.no-image-text {
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+}
+
+.image-preview {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: green;
+    color: #fff;
+}
+
+.imagebutton {
+    border: none;
+}
+
+.store-rating {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* Added margin to separate OPTIONS section from the recommended store list */
+.option-bar .options-header {
+    margin-top: 20px;
+}

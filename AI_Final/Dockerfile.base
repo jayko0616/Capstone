@@ -1,0 +1,16 @@
+# 베이스 이미지로 Miniconda 사용
+FROM continuumio/miniconda3
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 환경 파일 복사 및 환경 생성
+COPY capstone.yml .
+RUN conda env create -f capstone.yml \
+    && conda clean -a -y
+
+# 환경을 활성화하는 명령어를 프리셋으로 설정
+SHELL ["conda", "run", "-n", "capstone", "/bin/bash", "-c"]
+
+# 기본 이미지로 사용되기 위해 기본 명령어 설정 (변경 가능)
+CMD ["bash"]

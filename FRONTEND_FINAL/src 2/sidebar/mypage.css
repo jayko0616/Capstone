@@ -1,0 +1,100 @@
+.mypage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5%;
+    background-image: url("clip.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("face.jpeg");
+    margin-right: 3%;
+    margin-top: 5%;
+    border-right: 2px solid #ccc; /* 구분선 추가 */
+    padding-right: 8%; /* 간격 추가 */
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.box1 > .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 50px); /* 간격 유지를 위해 폭 조정 */
+    padding-left: 20px;
+}
+
+.box2 {
+    width: 80%;
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+
+.quit {
+    background-color: white;
+    width: auto; /* 버튼 너비 자동 조절 */
+    border-radius: 5px;
+    margin-top: 100%;
+    transition: background-color 0.3s;
+    border : none;
+}
+
+.quit:hover{
+    background-color: indianred;
+}
+
+.edit {
+    background-image: url("edit.png");
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+}
+
+.h3, h3 {
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infohead{
+    margin-top : 10vh;
+    margin-bottom: 3vh;
+    font-size : 20px;
+}

@@ -1,0 +1,170 @@
+/* General container styling */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto; /* Adjusted for spacing from header */
+    background-color: #f9f9f9;
+    min-height: 700px; /* Increased overall height */
+    margin-top: 80px;
+}
+
+/* Form styling */
+.review-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title, grade, and capacity container */
+.title-grade-capacity {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.review-form input[type="text"],
+.review-form input[type="number"],
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.review-form input[type="text"].title-input {
+    flex: 3;
+    max-width: calc(100% - 20px);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #000; /* 밑줄을 굵게 */
+}
+
+.review-form input[type="number"].capacity-input {
+    flex: 1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #000; /* 밑줄을 굵게 */
+    min: 0; /* 최소값 0으로 설정 */
+}
+
+/* Textarea styling */
+.review-form textarea {
+    resize: vertical;
+    height: 70vh; /* Increased height */
+    background-color: #fff; /* 흰색 배경 추가 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Image upload styling */
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-upload input[type="file"] {
+    margin-top: 10px;
+    border: none; /* Removing border */
+    background: none; /* Removing background */
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-name {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-preview {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Rating stars styling */
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+}
+
+.rating:not(:checked) > label {
+    float: left;
+    cursor: pointer;
+    font-size: 30px;
+    color: black; /* 기본 색상 검은색 */
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723; /* 채워진 별의 색상 금색 */
+}
+
+/* Submit button styling */
+.review-form button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-form button:disabled {
+    cursor: not-allowed;
+}
+
+.review-form button:hover:not(:disabled) {
+    font-weight: bold;
+    background-color: green;
+}

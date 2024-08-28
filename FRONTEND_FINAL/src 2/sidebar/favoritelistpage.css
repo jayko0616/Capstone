@@ -1,0 +1,87 @@
+.favoriteCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 20px;
+    font-family: 'Arial', sans-serif;
+    padding: 90px 2rem 2rem; /* 상단에 80px 패딩을 추가하여 헤더에 가리지 않도록 함 */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* 한 줄에 4개의 카드가 들어가도록 설정 */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.date {
+    font-size: 14px;
+    color: #999;
+}
+
+.heart {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.store-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.address, .category, .rating, .likes {
+    font-size: 14px;
+    margin: 0.3rem 0;
+}
+
+.category {
+    color: #666;
+}
+
+.rating-likes {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 10px; /* 평점과 좋아요 사이의 간격 */
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f4;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.rating, .likes {
+    color: #333;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    margin-left: 0.5rem; /* 평점 숫자와 별 사이의 간격 조정 */
+}
